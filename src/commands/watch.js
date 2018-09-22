@@ -4,7 +4,17 @@ const   gulp   = require('gulp');
 const    fs    = require('fs');
 
 class watch {
-    
+    static all(...args) {
+
+    }
+
+    static sass(...args) {
+
+    }
+
+    static jade(...args) {
+        
+    }
 }
 
 
