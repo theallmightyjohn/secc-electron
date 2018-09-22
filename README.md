@@ -1,8 +1,13 @@
-# electron-quick-start
+# SECC Electron
 
 **Clone and run for a quick way to see Electron in action.**
 
 This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+I have extended it to make use of the SECC principals, utilizing the gulp task runner library
+as the command line tool that generates the various components of an MVC application. Features
+include SASS and JADE template (legecy) preprocessors, code generators for models, views, 
+controllers, and gulp commands... extendabillity is the key concept behind this framework, so 
+be creative and make it your own. 
 
 **Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
 
@@ -20,9 +25,9 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/vulgarkittenstudios/secc-electron.git
 # Go into the repository
-cd electron-quick-start
+cd secc-electron
 # Install dependencies
 npm install
 # Run the app
