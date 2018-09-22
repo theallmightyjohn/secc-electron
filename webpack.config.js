@@ -1,19 +1,17 @@
 const webpack = require('webpack');
-const modules = process.env.NODE_PATH;
+const modules = ['node_modules', 'bower_components'];
 
 module.exports = {
   
   mode: 'development',
+  target: "electron-renderer",
   resolve: {
-     modules: [modules],
+     modules: modules,
      descriptionFiles: ['package.json'],
-     extensions: ['.js', '.json', '.html'],
-     alias: {
-      fs: require.resolve('browserify-fs')
-    }
+     extensions: ['.js', '.json', '.html']
   },
   resolveLoader: {
-    modules: [modules],
+    modules: modules,
     extensions: ['.js', '.json'],
     mainFields: ['loader', 'main']
   },
