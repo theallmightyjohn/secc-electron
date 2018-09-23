@@ -20,7 +20,7 @@ class sass {
         rp.join('/');
         
         var file = fn.substr(0, fn.lastIndexOf(".")) + ".css";
-
+        
         Sass.render({file: f}, function(err, result) {
 
             fs.writeFile('./dist/css/'+file, result.css, (err) => {

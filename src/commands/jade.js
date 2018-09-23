@@ -14,12 +14,22 @@ class jade {
         
         let p = file.split('\\').reverse().slice(1).reverse().join('/')+'/';
         let f = file.split('\\').reverse().shift();
-        return gulp.src(file)
+        
+        if(callback != undefined || callback != null) {
+            return gulp.src(file)
             .pipe(gulpJade({
                 jade: Jade,
                 pretty: true
             }))
             .pipe(gulp.dest(p), callback(f, p));
+        } else {
+            return gulp.src(file)
+            .pipe(gulpJade({
+                jade: Jade,
+                pretty: true
+            }))
+            .pipe(gulp.dest(p));
+        }
     }
     
     static scan(dir) {
