@@ -26,8 +26,12 @@ class observe {
             for(let i = 0; i < files.length; i++) {
                 gulp.watch(files[i], (e) => {
 
-                    let path = e.path.replace(config.cmd.preprocessorTargetFilePrefix, '');
-                    let file = e.path.split('\\').reverse().shift();
+                    let pathArray = e.path.split(config['rootFolder']);
+                        let path = pathArray[1];
+                        let file = e.path.split('\\').reverse().shift();
+
+                        while(path.charAt(0) === '\\') 
+                            path = path.substr(1);
 
                     let opts = {
                         compile: path
@@ -51,10 +55,14 @@ class observe {
                 let ext = str.getExt(file);
                 if(ext == 'jade') {
                     gulp.watch(files[i], (e) => {
-                        console.log(e.path);
-                        let path = e.path.replace(config.cmd.preprocessorTargetFilePrefix, '');
+
+                        let pathArray = e.path.split(config['rootFolder']);
+                        let path = pathArray[1];
                         let file = e.path.split('\\').reverse().shift();
-    
+
+                        while(path.charAt(0) === '\\') 
+                            path = path.substr(1);
+                        
                         let opts = {
                             compile: path
                         }

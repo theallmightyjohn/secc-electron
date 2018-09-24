@@ -1,5 +1,3 @@
 {
-    "cmd": {
-        "preprocessorTargetFilePrefix": "C:\\Users\\susan ivey\\Documents\\VKS Projects\\secc-electron\\"
-    }
+    "rootFolder": "secc-electron"
 }
