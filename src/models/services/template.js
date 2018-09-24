@@ -41,6 +41,6 @@ export default class template {
 	compile(element) {
 
 		let temp = handlebars.compile(this.main);
-		$('#'+element).append(temp());
+		document.getElementById(element).innerHTML += temp();
 	}
 }
